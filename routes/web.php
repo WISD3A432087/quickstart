@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
      * 顯示所有任務
      */
     Route::get('/', function () {
-        //
+       return view('tasks');
+
     });
 
     /**
