@@ -25,8 +25,12 @@ Route::post('/task', function (Request $request) {
             ->withInput()
             ->withErrors($validator);
     }
+//建立任務
+    $task = new Task;
+    $task->name = $request->name;
+    $task->save();
 
-    // 建立該任務...
+    return redirect('/');
 });
 
     /**
